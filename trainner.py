@@ -12,7 +12,7 @@ def getImagesWithID(path):
     IDs=[]
     for imagePath in imagePaths:
         faceImg=Image.open(imagePath).convert('L')
-        facenp=np.array(faceImg,'uint8')
+        faceNp=np.array(faceImg,'uint8')
         ID=int(os.path.split(imagePath)[-1].split('.')[1])
         faces.append(faceNp)
         IDs.append(ID)
